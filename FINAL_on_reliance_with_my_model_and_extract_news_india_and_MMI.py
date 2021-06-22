@@ -39,6 +39,7 @@ from datetime import date, timedelta
 batch_size =1024
 time_steps =30
 look_back =1
+# need to give your api_key and api_secret here. You need to request it from Kite api(in my case)
 kite = KiteConnect(api_key=api_key)
 kite_ticker=KiteTicker(api_key=api_key,access_token=access_token)
 # proxies = {
