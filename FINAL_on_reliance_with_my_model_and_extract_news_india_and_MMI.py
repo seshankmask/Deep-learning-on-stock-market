@@ -90,9 +90,7 @@ while i<=2:
         sys.exit()
     except KeyError:
         time.sleep(3)
-        api_key = 'g58hqt19c8htbuw3'
-        api_secret="zor78r0jbuow5vxk6jd7w59rhmzwt2gi"
-        access_token='6CMIxmt5odOF57cDJqg29Xv6vHC5h6zK'
+        # need to give your api_key and api_secret here. You need to request it from Kite api(in my case)
         # kite = KiteConnect(api_key=api_key)
         # proxies = {
         #   'http': 'http://proxy.blisc.in:3128',
@@ -102,9 +100,7 @@ while i<=2:
         kite_ticker.__init__(api_key=api_key,access_token=access_token,reconnect=True,reconnect_max_tries=300,reconnect_max_delay=60,connect_timeout=10000)
         kite.set_access_token(access_token)
     except socket.gaierror:
-        api_key = 'g58hqt19c8htbuw3'
-        api_secret="zor78r0jbuow5vxk6jd7w59rhmzwt2gi"
-        access_token='6CMIxmt5odOF57cDJqg29Xv6vHC5h6zK'
+        # need to give your api_key and api_secret here. You need to request it from Kite api(in my case)
         # kite = KiteConnect(api_key=api_key)
         # proxies = {
         #   'http': 'http://proxy.blisc.in:3128',
@@ -114,10 +110,7 @@ while i<=2:
         kite_ticker.__init__(api_key=api_key,access_token=access_token,reconnect=True,reconnect_max_tries=300,reconnect_max_delay=60,connect_timeout=10000)
         kite.set_access_token(access_token)
     except Exception as f:
-        print(f)
-        api_key = 'g58hqt19c8htbuw3'
-        api_secret="zor78r0jbuow5vxk6jd7w59rhmzwt2gi"
-        access_token='6CMIxmt5odOF57cDJqg29Xv6vHC5h6zK'
+        # need to give your api_key and api_secret here. You need to request it from Kite api(in my case)
         # kite = KiteConnect(api_key=api_key)
         # proxies = {
         #   'http': 'http://proxy.blisc.in:3128',
@@ -128,12 +121,7 @@ while i<=2:
         kite.set_access_token(access_token)
 
     except HTTPSConnectionPool as e:
-        print(e)
-        python=sys.executable
-        os.execl(python,python,"./Data_extraction_reliance-checkpoint.py")
-        api_key = 'g58hqt19c8htbuw3'
-        api_secret="zor78r0jbuow5vxk6jd7w59rhmzwt2gi"
-        access_token='6CMIxmt5odOF57cDJqg29Xv6vHC5h6zK'
+        # need to give your api_key and api_secret here. You need to request it from Kite api(in my case)
         # kite = KiteConnect(api_key=api_key)
         # proxies = {
         #   'http': 'http://proxy.blisc.in:3128',
@@ -143,9 +131,7 @@ while i<=2:
         kite_ticker.__init__(api_key=api_key,access_token=access_token,reconnect=True,reconnect_max_tries=300,reconnect_max_delay=60,connect_timeout=10000)
         kite.set_access_token(access_token)
     except kiteconnect.exceptions:
-        api_key = 'g58hqt19c8htbuw3'
-        api_secret="zor78r0jbuow5vxk6jd7w59rhmzwt2gi"
-        access_token='6CMIxmt5odOF57cDJqg29Xv6vHC5h6zK'
+        # need to give your api_key and api_secret here. You need to request it from Kite api(in my case)
         kite = KiteConnect(api_key=api_key)
         # proxies = {
         #   'http': 'http://proxy.blisc.in:3128',
@@ -644,7 +630,6 @@ def get_quotes(quote):
 
 xtrain,ytrain = data(batch_size,time_steps,look_back)
 print(xtrain.shape)
-print("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
 ###################################################################################################################################################
 dependencies = {
     'my_metric_fn': my_metric_fn}
