@@ -39,10 +39,6 @@ from datetime import date, timedelta
 batch_size =1024
 time_steps =30
 look_back =1
-
-api_key = 'g58hqt19c8htbuw3'
-api_secret="zor78r0jbuow5vxk6jd7w59rhmzwt2gi"
-access_token='6CMIxmt5odOF57cDJqg29Xv6vHC5h6zK'
 kite = KiteConnect(api_key=api_key)
 kite_ticker=KiteTicker(api_key=api_key,access_token=access_token)
 # proxies = {
