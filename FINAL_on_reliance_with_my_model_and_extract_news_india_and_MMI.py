@@ -479,15 +479,15 @@ def stok(df,n):
     return df
 
 def news_api():
-    ny_times = ('https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=Lq2MwaHUecj8voxGj6SwXnhg31dNTGtJ')
+    ny_times = ('https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=apikey')
     resp_ny_times= requests.get(business_news_url_in)
     data_top_HL_ny_times=resp.json()
     data_ny_times=data_top_HL_ny_times['results'][0]['abstract']
-    business_news_url_in = ('http://newsapi.org/v2/top-headlines?country=in&sortBy=publishedAt&category=business&apiKey=d0273c0c1b134f7282ab910758c79c46')
+    business_news_url_in = ('http://newsapi.org/v2/top-headlines?country=in&sortBy=publishedAt&category=business&apiKey=apikey')
     resp= requests.get(business_news_url_in)
     data_top_HL=resp.json()
     data_business=list(data_top_HL['articles'])[0]
-    reliance_url = ('http://newsapi.org/v2/everything?q=reliance&from=2020-06-16&to=2020-06-16&sortBy=publishedAt&apiKey=d0273c0c1b134f7282ab910758c79c46')
+    reliance_url = ('http://newsapi.org/v2/everything?q=reliance&from=2020-06-16&to=2020-06-16&sortBy=publishedAt&apiKey=apikey')
     resp_reliance= requests.get(reliance_url)
     data_top_rel=resp_reliance.json()
     data_rel=list(data_top_rel['articles'])[0]
@@ -634,7 +634,7 @@ print(xtrain.shape)
 dependencies = {
     'my_metric_fn': my_metric_fn}
 
-lstm_model=tf.keras.models.load_model("/Volumes/Reserved/Deep_learning/LSTM_implement_ashutosh_example/best_model.h5", custom_objects=dependencies)
+lstm_model=tf.keras.models.load_model("./best_model.h5", custom_objects=dependencies)
 y_pred=lstm_model.predict(x=xtrain,batch_size=1024,use_multiprocessing=True)
 y_pred_transformed=scalar_y.inverse_transform(y_pred)
 print(y_pred_transformed[0:20])
